@@ -1,7 +1,5 @@
 package com.dsc.dscbot;
 
-
-
 import android.app.Activity;
 import android.os.AsyncTask;
 
@@ -36,7 +34,7 @@ public class RequestTask  extends AsyncTask<AIRequest, Void, AIResponse> {
 
     @Override
     protected void onPostExecute(AIResponse aiResponse) {
-        ((dsc.pens.quizbot.MainActivity)activity).callback(aiResponse);
+        ((MainActivity)activity).callback(aiResponse);
     }
 }
 
