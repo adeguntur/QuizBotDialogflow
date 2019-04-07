@@ -1,11 +1,13 @@
 package com.dsc.dscbot;
 
+
+
 import android.app.Activity;
 import android.os.AsyncTask;
 
-import ai.api.AIDataService;
 import ai.api.AIServiceContext;
 import ai.api.AIServiceException;
+import ai.api.android.AIDataService;
 import ai.api.model.AIRequest;
 import ai.api.model.AIResponse;
 
@@ -34,6 +36,7 @@ public class RequestTask  extends AsyncTask<AIRequest, Void, AIResponse> {
 
     @Override
     protected void onPostExecute(AIResponse aiResponse) {
-        ((MainActivity)activity).callback(aiResponse);
+        ((dsc.pens.quizbot.MainActivity)activity).callback(aiResponse);
     }
 }
+
